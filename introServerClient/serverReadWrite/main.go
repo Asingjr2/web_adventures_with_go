@@ -15,6 +15,7 @@ func main() {
 	defer li.Close()
 
 	for {
+		// Accepts requests for connection and returns connection object
 		conn, err := li.Accept()
 		if err != nil {
 			log.Println(err)

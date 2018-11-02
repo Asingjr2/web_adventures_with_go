@@ -8,7 +8,9 @@ import (
 )
 
 func main() {
-	// Create connection that dials to a specific server and connects
+	// Equivalent to "subscribe" half in pub-sub model.
+	// Create requests to connect that dials to a specific server and connects.
+	// Format for address is different.
 	conn, err := net.Dial("tcp", "localhost:8080")
 	if err != nil {
 		panic(err)
@@ -21,7 +23,7 @@ func main() {
 		log.Println(err)
 	}
 
-	// Print returned bs if any
+	// Print returned bs if any.
 	if bs != nil {
 		fmt.Println(string(bs))
 	}

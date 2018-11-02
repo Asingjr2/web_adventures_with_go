@@ -19,6 +19,7 @@ func main() {
 
 	for {
 		// Listening for and creating a connection
+		// Creating infinite loop so connection has to be closed manually
 		conn, err := li.Accept()
 		if err != nil {
 			log.Println(err)
